@@ -1,0 +1,26 @@
+Author: Sebastian Kraetzig <info@ts3-tools.info>
+Project: www.ts3-tools.info
+
+----------------------------------
+
+C H A N G E L O G
+
+----------------------------------
+
+This file shows all the adjustments which were done in this TS3 UpdateScript. For example there were some corrections on the code, some new features and bugfixes. This file is always referred to the attached TS3 UpdateScript.
+
+----------------------------------
+
+History:
+	+ Added something
+	- Removed something
+	* Changed/Fixed something
+	! Hint/Warning
+
+----------------------------------
+
+==================================
+||      Version 1.0             ||
+==================================
+
++ First working version

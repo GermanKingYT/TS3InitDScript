@@ -1,6 +1,10 @@
 README
 ============
 
+End of Life
+============
+Please notice, that this software is not longer supported and maintained since 10/2014!
+
 Developers
 ============
 Sebastian Kraetzig [info@ts3-tools.info]

@@ -42,10 +42,13 @@ The script uses the ts3server_startscript.sh of the set instance.
 
 Installation
 ============
-Save the ts3server file in /etc/init.d/ directory and fill out following line:
-	# USER="teamspeak"
 
-You have to enter the username, who ownes the TeamSpeak server instance files.
+- Save the ts3server file in /etc/init.d/ directory
+- Open the script with `nano /etc/init.d/ts3server` and fill out:  `USER="teamspeak"` You have to enter the username, who ownes the TeamSpeak server instance files and if you need them `TS3PATH=""` and `PARAM=""`.
+- Make the script executable with `chmod +x /etc/init.d/ts3server`.
+- Update the startup config with update-rc.d ts3server defaults.
+
+
 
 Donate
 ============

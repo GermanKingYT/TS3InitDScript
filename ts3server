@@ -13,7 +13,10 @@
 
 DESC="voice server"
 NAME=ts3server
-USER="teamspeak"
+USER="ts3"
+TS3PATH=""
+TS3NAME="ts3server_startscript.sh"
+PARAM="inifile=ts3server.ini"
 
 SCRIPTNAME="${0##*/}"
 SCRIPTNAME="${SCRIPTNAME##[KS][0-9][0-9]}"
@@ -24,22 +27,22 @@ case "$1" in
   start)
 	echo "Starting $DESC" "$NAME"
 	echo
-	su - $USER -c "./ts3server_startscript.sh start"
+	su - $USER -c "./${TS3PATH}${TS3NAME} start $PARAM"
 	;;
   stop)
 	echo "Stopping $DESC" "$NAME"
 	echo
-	su - $USER -c "./ts3server_startscript.sh stop"
+	su - $USER -c "./${TS3PATH}${TS3NAME} stop"
 	;;
   status)
-	su - $USER -c "./ts3server_startscript.sh status"
+	su - $USER -c "./${TS3PATH}${TS3NAME} status"
 	exit $?
 	;;
   restart)
 	echo "Restarting $DESC" "$NAME"
 	echo
-	su - $USER -c "./ts3server_startscript.sh stop"
-	su - $USER -c "./ts3server_startscript.sh start"
+	su - $USER -c "./${TS3PATH}${TS3NAME} stop"
+	su - $USER -c "./${TS3PATH}${TS3NAME} start $PARAM"
 	;;
   *)
 	echo "Usage: $SCRIPTNAME {start|stop|status|restart}" >&2
